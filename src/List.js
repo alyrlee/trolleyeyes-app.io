@@ -24,14 +24,17 @@ import React from 'react';
 	      <div className='List-cards'>
 	        {props.cards.map((card) =>
 	          <Card
-	            key={card.id}
+				key={card.id}
+				id={card.id}
 	            title={card.title}
-	            content={card.content}
+				content={card.content}
+				onClickDelete={props.onClickDelete}
 	          />
 	        )}
 	        <button
 	          type='button'
-	          className='List-add-button'
+			  className='List-add-button'
+			  onClick={() => props.onClickAdd(props.id)}
 	        >
 	          + Add Random Card
 	        </button>
@@ -40,5 +43,8 @@ import React from 'react';
 	  )
 	}
 
+	List.defaultProps = {
+		onClickAdd: () => {},
+	  }
 
   

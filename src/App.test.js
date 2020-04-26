@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.js';
 import STORE from './store.js';
 import renderer from 'react-test-renderer';
 
